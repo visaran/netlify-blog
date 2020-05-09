@@ -1,7 +1,7 @@
 {
   "name": "netlify-blog",
   "version": "1.0.0",
-  "description": "My excellent Nuxt.js project",
+  "description": "My priceless Nuxt.js project",
   "author": "Vinicius",
   "private": true,
   "scripts": {
@@ -16,7 +16,6 @@
     "@nuxtjs/dotenv": "^1.4.0"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.6.0",
-    "@nuxtjs/vuetify": "^1.0.0"
+    "@nuxt/typescript-build": "^0.6.0"
   }
 }

@@ -1,6 +1,6 @@
 # netlify-blog
 
-> My excellent Nuxt.js project
+> My priceless Nuxt.js project
 
 ## Build Setup
 
