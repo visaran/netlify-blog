@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div v-for="post in posts" :key="post.id">
-      {{ post }}
-    </div>
+    <h2 class="h1 text-center font-weight-bold mb-6">Últimos posts</h2>
+    <post-item :post="post" v-for="post in posts" :key="post.id" />
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
+import PostItem from "@/components/PostItem.vue";
 
 @Component({
   head() {
@@ -16,6 +16,9 @@ import { Vue, Component } from "vue-property-decorator";
         { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
       ]
     };
+  },
+  components: {
+    PostItem
   }
 })
 export default class Home extends Vue {

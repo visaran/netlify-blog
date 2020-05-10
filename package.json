@@ -13,10 +13,16 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.13.1",
     "nuxt": "^2.0.0",
+    "vue": "^2.6.11",
     "vue-property-decorator": "^8.4.2"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.6.0"
+    "@nuxt/typescript-build": "^0.6.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2"
   }
 }
