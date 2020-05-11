@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="h1 text-center font-weight-bold mb-6">Últimos posts</h2>
+    <h2 class="h1 text-center font-weight-bold mb-6">Últimos artigos</h2>
     <post-item :post="post" v-for="post in posts" :key="post.id" />
   </div>
 </template>

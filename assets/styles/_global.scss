@@ -1,5 +1,12 @@
 body {
   font-family: "Roboto", sans-serif;
-  padding-left: 256px;
   color: $gray;
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 320px;
+  }
+}
+
+a {
+  color: $white;
 }

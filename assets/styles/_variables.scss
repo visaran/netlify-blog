@@ -1,8 +1,19 @@
 $pink: #dda2a2;
 $gray: #403e3e;
+$blue: #000 !important;
 
 $primary: $pink;
 $secondary: $gray;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+  ),
+  $theme-colors
+);
 
 $spacer: 5px;
 $spacers: ();

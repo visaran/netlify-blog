@@ -16,6 +16,18 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
+  generate: {
+    routes: function() {
+      const fs = require("fs");
+      const path = require("path");
+      return fs.readdirSync("./assets/content/blog").map(file => {
+        return {
+          route: `/blog/${path.parse(file).name}`, // Return the slug
+          payload: require(`./assets/content/blog/${file}`)
+        };
+      });
+    }
+  },
   /*
    ** Customize the progress-bar color
    */
@@ -41,8 +53,27 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
     "bootstrap-vue/nuxt",
-    "@nuxtjs/style-resources"
+    "@nuxtjs/style-resources",
+    "@nuxtjs/markdownit",
+    [
+      "nuxt-fontawesome",
+      {
+        imports: [
+          {
+            set: "@fortawesome/free-solid-svg-icons",
+            icons: ["fas"]
+          },
+          {
+            set: "@fortawesome/free-brands-svg-icons",
+            icons: ["fab"]
+          }
+        ]
+      }
+    ]
   ],
+  markdownit: {
+    injected: true
+  },
   styleResources: {
     scss: [
       "@/assets/styles/_functions.scss",

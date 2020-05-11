@@ -16,7 +16,6 @@ collections:
       preview: false
     fields:
       - { label: 'Título', name: 'title', widget: 'string' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Data da publicação', name: 'date', widget: 'datetime' }
       - { label: 'Descrição', name: 'description', widget: 'string' }
       - { label: 'Conteúdo', name: 'body', widget: 'markdown' }
