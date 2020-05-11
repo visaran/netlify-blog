@@ -6,16 +6,17 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'artigo'
-    label: 'Artigo'
-    format: 'json'
-    folder: 'assets/content/blog'
+  - name: "artigo"
+    label: "Artigo"
+    format: "json"
+    folder: "assets/content/blog"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Título', name: 'title', widget: 'string' }
-      - { label: 'Data da publicação', name: 'date', widget: 'datetime' }
-      - { label: 'Descrição', name: 'description', widget: 'string' }
-      - { label: 'Conteúdo', name: 'body', widget: 'markdown' }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data da publicação", name: "date", widget: "datetime" }
+      - { label: "Descrição", name: "description", widget: "string" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
