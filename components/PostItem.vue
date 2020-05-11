@@ -4,7 +4,7 @@
       :to="post.slug"
       class="post-item__img post-item__link"
       :style="{
-        backgroundImage: `url(https://cdn.vuetifyjs.com/images/cards/docks.jpg)`
+        backgroundImage: `url(${post.thumbnail})`
       }"
     >
       <h1 class="post-item__title h2">{{ post.title }}</h1>
