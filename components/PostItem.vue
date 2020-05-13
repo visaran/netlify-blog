@@ -53,6 +53,7 @@ export default class PostItem extends Vue {
 
   &__title {
     color: $white;
+    text-shadow: 2px 2px 5px #000;
   }
 }
 </style>
