@@ -10,7 +10,7 @@
       <h1 class="post-item__title h2">{{ post.title }}</h1>
     </nuxt-link>
     <div class="card-body">
-      <p class="card-text">{{ post.description }}</p>
+      <p class="post-item__text">{{ post.description }}</p>
       <nuxt-link :to="post.slug" class="btn btn-secondary" variant="secondary"
         >Continue lendo</nuxt-link
       >
@@ -54,6 +54,10 @@ export default class PostItem extends Vue {
   &__title {
     color: $white;
     text-shadow: 2px 2px 5px #000;
+  }
+
+  &__text {
+    font-size: 18px;
   }
 }
 </style>
