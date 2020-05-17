@@ -5,7 +5,6 @@
         <h1 class="title">{{ pageInfo.title }}</h1>
         <div class="post-content" v-html="$md.render(pageInfo.content)"></div>
         <p></p>
-        <p><strong>OAB/SP n°439.137</strong></p>
       </div>
       <img
         :src="pageInfo.thumbnail"
