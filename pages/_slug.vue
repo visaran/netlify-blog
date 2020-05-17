@@ -23,6 +23,10 @@ export default class HomeSlug extends Vue {}
 
 <style lang="scss" scoped>
 .post-content {
+  text-align: justify;
+  font-size: 22px;
+  color: $black;
+
   h1,
   h2,
   h3,
@@ -32,13 +36,16 @@ export default class HomeSlug extends Vue {}
     font-weight: bold;
     margin-top: 40px;
     margin-bottom: 20px;
+    color: $pink;
 
     &:first-child {
       margin-top: 0;
     }
   }
+
   p {
     text-align: justify;
+    font-size: 22px;
   }
 }
 </style>

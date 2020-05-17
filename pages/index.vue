@@ -1,7 +1,20 @@
 <template>
-  <div>
-    <h2 class="h1 text-center font-weight-bold mb-6">Últimos artigos</h2>
-    <post-item :post="post" v-for="post in posts" :key="post.id" />
+  <div class="home">
+    <div class="media">
+      <div class="media-body">
+        <h1 class="title">Taís Camargo Siqueira</h1>
+        <p>
+          Advogada formada pela UNIFEOB e pós-graduanda em Direito Empresarial
+          pela Faculdade Legale.
+        </p>
+        <p><strong>OAB/SP n°439.137</strong></p>
+      </div>
+      <img
+        src="http://placehold.it/300x300"
+        alt=""
+        class="home__photo ml-lg-4 mx-auto"
+      />
+    </div>
   </div>
 </template>
 
@@ -28,6 +41,42 @@ export default class Home extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.home {
+  .home__photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
 
+  .media {
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+
+    .home__photo {
+      @include media-breakpoint-down(lg) {
+        order: 1;
+        margin-bottom: 20px;
+      }
+    }
+
+    .media-body {
+      @include media-breakpoint-down(lg) {
+        order: 2;
+      }
+    }
+  }
+
+  .title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 20px;
+  }
+}
 </style>

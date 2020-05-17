@@ -7,11 +7,14 @@
         backgroundImage: `url(${post.thumbnail})`
       }"
     >
-      <h1 class="post-item__title h2">{{ post.title }}</h1>
+      <h1 class="post-item__title h1">{{ post.title }}</h1>
     </nuxt-link>
     <div class="card-body">
       <p class="post-item__text">{{ post.description }}</p>
-      <nuxt-link :to="post.slug" class="btn btn-secondary" variant="secondary"
+      <nuxt-link
+        :to="post.slug"
+        class="btn btn-lg btn-secondary"
+        variant="secondary"
         >Continue lendo</nuxt-link
       >
     </div>
@@ -32,6 +35,8 @@ export default class PostItem extends Vue {
   margin-bottom: 40px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
   &:last-of-type {
     margin-bottom: 0;
@@ -58,10 +63,12 @@ export default class PostItem extends Vue {
   &__title {
     color: $white;
     text-shadow: 2px 2px 5px #000;
+    font-weight: bold;
   }
 
   &__text {
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
   }
 }
 </style>

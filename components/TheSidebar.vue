@@ -1,44 +1,67 @@
 <template>
-  <aside class="sidebar" :class="{ active: isSidebarActive }">
-    <b-avatar
-      variant=""
-      src="https://placekitten.com/300/300"
-      size="150"
-      class="mb-4"
-      href="/"
-    ></b-avatar>
-    <h2 class="h4 mb-2 font-weight-bold">Taís Camargo Siqueira</h2>
-    <p class="mb-2">
-      Advogada formada pela UNIFEOB e pós-graduanda em Direito Empresarial pela
-      Faculdade Legale.
+  <aside class="sidebar" :class="{ active: isActive }">
+    <a href="/">
+      <img src="~/assets/images/logo.jpeg" class="sidebar__logo" alt="" />
+    </a>
+    <h2 class="h3 mb-8 font-weight-bold">Taís Camargo Siqueira</h2>
+    <p class="h4 mb-1">
+      <a href="#"><font-awesome-icon :icon="['fab', 'whatsapp']"/></a>
+      (19) 98134-4146
     </p>
-    <p class="mb-6"><strong>OAB/SP n°439.137</strong></p>
+    <p class="h4">
+      <a href="#"><font-awesome-icon :icon="['fas', 'envelope']"/></a>
+      taissiqueira@adv.oabsp.org.br
+    </p>
 
-    <h4 class="h5">Redes sociais:</h4>
+    <ul class="menu ">
+      <li class="">
+        <nuxt-link to="/" @click.native="closeMenu">Início</nuxt-link>
+      </li>
+      <li class="">
+        <nuxt-link to="/blog" @click.native="closeMenu">Blog</nuxt-link>
+      </li>
+    </ul>
+
+    <h4 class="h4">Redes sociais:</h4>
     <ul class="list-inline">
       <li class="list-inline-item">
-        <a href="#"><font-awesome-icon :icon="['fab', 'linkedin']"/></a>
+        <a
+          href="https://www.linkedin.com/in/ta%C3%ADs-camargo-siqueira-374160138/"
+          target="_blank"
+          ><font-awesome-icon :icon="['fab', 'linkedin']"
+        /></a>
       </li>
       <li class="list-inline-item">
-        <a href="#"><font-awesome-icon :icon="['fab', 'facebook']"/></a>
+        <a href="https://www.facebook.com/taissiqueiraadv/" target="_blank"
+          ><font-awesome-icon :icon="['fab', 'facebook']"
+        /></a>
       </li>
       <li class="list-inline-item">
-        <a href="#"><font-awesome-icon :icon="['fab', 'instagram']"/></a>
+        <a href="https://www.instagram.com/taissiqueiraadv/" target="_blank"
+          ><font-awesome-icon :icon="['fab', 'instagram']"
+        /></a>
       </li>
     </ul>
   </aside>
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop, Watch } from "vue-property-decorator";
+import { Vue, Component, Prop, Watch, Emit } from "vue-property-decorator";
 
 @Component({})
 export default class TheSidebar extends Vue {
   @Prop() isSidebarActive!: boolean;
-  drawer: boolean = true;
 
-  mounted() {
-    console.log(this.isSidebarActive);
+  closeMenu() {
+    this.$emit("closed", false);
+  }
+
+  get isActive() {
+    if (this.isSidebarActive) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 </script>
@@ -49,7 +72,7 @@ export default class TheSidebar extends Vue {
   top: 0;
   left: 0;
   height: 100%;
-  width: 320px;
+  width: 80%;
   text-align: center;
   padding: 20px;
   background-color: $gray;
@@ -64,6 +87,23 @@ export default class TheSidebar extends Vue {
 
   @include media-breakpoint-up(lg) {
     transform: translateX(0);
+    width: 320px;
+  }
+
+  &__logo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid $pink;
+    margin-bottom: 20px;
+    border-radius: 50%;
+  }
+
+  .menu {
+    font-size: 22px;
+    list-style: none;
+    padding-left: 0;
+    margin: 40px 0;
   }
 }
 </style>
