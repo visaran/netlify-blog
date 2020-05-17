@@ -52,7 +52,7 @@ export default class TheSidebar extends Vue {
   width: 320px;
   text-align: center;
   padding: 20px;
-  background: $gray;
+  background-color: $gray;
   color: $white;
   transform: translateX(-100%);
   z-index: 10;

@@ -30,6 +30,8 @@ export default class PostItem extends Vue {
 <style lang="scss" scoped>
 .post-item {
   margin-bottom: 40px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -42,6 +44,8 @@ export default class PostItem extends Vue {
     display: flex;
     align-items: flex-end;
     padding: 1.25rem;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
   }
 
   &__link {
