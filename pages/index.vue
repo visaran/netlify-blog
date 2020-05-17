@@ -2,16 +2,14 @@
   <div class="home">
     <div class="media">
       <div class="media-body">
-        <h1 class="title">Taís Camargo Siqueira</h1>
-        <p>
-          Advogada formada pela UNIFEOB e pós-graduanda em Direito Empresarial
-          pela Faculdade Legale.
-        </p>
+        <h1 class="title">{{ pageInfo.title }}</h1>
+        <div class="post-content" v-html="$md.render(pageInfo.content)"></div>
+        <p></p>
         <p><strong>OAB/SP n°439.137</strong></p>
       </div>
       <img
-        src="http://placehold.it/300x300"
-        alt=""
+        :src="pageInfo.thumbnail"
+        alt="Foto de perfil"
         class="home__photo ml-lg-4 mx-auto"
       />
     </div>
@@ -35,8 +33,8 @@ import PostItem from "@/components/PostItem.vue";
   }
 })
 export default class Home extends Vue {
-  get posts() {
-    return this.$store.state.blogPosts;
+  get pageInfo() {
+    return this.$store.state.aboutPage[0];
   }
 }
 </script>

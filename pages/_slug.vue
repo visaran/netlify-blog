@@ -10,7 +10,6 @@ import { Vue, Component } from "vue-property-decorator";
 
 @Component({
   async asyncData({ params, payload }) {
-    console.log(params.slug);
     if (payload) return { blogPost: payload };
     else
       return {
@@ -21,31 +20,4 @@ import { Vue, Component } from "vue-property-decorator";
 export default class HomeSlug extends Vue {}
 </script>
 
-<style lang="scss" scoped>
-.post-content {
-  text-align: justify;
-  font-size: 22px;
-  color: $black;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: $pink;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
-  p {
-    text-align: justify;
-    font-size: 22px;
-  }
-}
-</style>
+<style lang="scss" scoped></style>
