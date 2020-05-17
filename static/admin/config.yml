@@ -25,7 +25,7 @@ collections:
     files:
       - label: 'Página sobre'
         name: 'about'
-        file: 'site/content/about.yml'
+        file: 'assets/content/page/about.yml'
         fields:
           - { label: 'Título', name: title, widget: string }
           - { label: 'Foto', name: 'thumbnail', widget: 'image' }
