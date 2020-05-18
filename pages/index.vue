@@ -1,16 +1,23 @@
 <template>
   <div class="home">
-    <div class="media">
-      <div class="media-body">
-        <h1 class="title">{{ pageInfo.title }}</h1>
-        <div class="post-content" v-html="$md.render(pageInfo.content)"></div>
-        <p></p>
+    <div class="card shadow">
+      <div class="card-body">
+        <h1 class="title text-pink">{{ pageInfo.title }}</h1>
+        <div class="media">
+          <div class="media-body">
+            <div
+              class="post-content"
+              v-html="$md.render(pageInfo.content)"
+            ></div>
+            <p></p>
+          </div>
+          <img
+            :src="pageInfo.thumbnail"
+            alt="Foto de perfil"
+            class="home__photo ml-lg-4 mx-auto"
+          />
+        </div>
       </div>
-      <img
-        :src="pageInfo.thumbnail"
-        alt="Foto de perfil"
-        class="home__photo ml-lg-4 mx-auto"
-      />
     </div>
   </div>
 </template>
@@ -47,6 +54,7 @@ export default class Home extends Vue {
   }
 
   .media {
+    align-items: center;
     @include media-breakpoint-down(lg) {
       flex-direction: column;
     }

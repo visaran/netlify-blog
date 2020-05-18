@@ -80,6 +80,7 @@ export default class TheSidebar extends Vue {
   transform: translateX(-100%);
   z-index: 10;
   transition: transform 0.3s ease-in;
+  box-shadow: 1px -9px 10px rgba(0, 0, 0, 0.5);
 
   &.active {
     transform: translateX(0);
