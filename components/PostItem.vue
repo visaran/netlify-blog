@@ -1,5 +1,5 @@
 <template>
-  <article class="post-item card">
+  <article class="post-item card shadow">
     <nuxt-link
       :to="post.slug"
       class="post-item__img post-item__link"
