@@ -2,9 +2,10 @@
   <div class="home">
     <div class="card shadow">
       <div class="card-body">
-        <h1 class="title text-pink">{{ pageInfo.title }}</h1>
         <div class="media">
           <div class="media-body">
+            <h1 class="title text-pink">{{ pageInfo.title }}</h1>
+
             <div
               class="post-content"
               v-html="$md.render(pageInfo.content)"
@@ -49,8 +50,8 @@ export default class Home extends Vue {
 .home {
   .home__photo {
     width: 300px;
-    height: 300px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
   }
 
   .media {
