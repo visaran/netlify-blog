@@ -49,9 +49,14 @@ export default class Home extends Vue {
 <style lang="scss" scoped>
 .home {
   .home__photo {
-    width: 300px;
+    width: 160px;
     height: 100%;
+    max-width: 100%;
     object-fit: contain;
+
+    @include media-breakpoint-up(lg) {
+      width: 300px;
+    }
   }
 
   .media {

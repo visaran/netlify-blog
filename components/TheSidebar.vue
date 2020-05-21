@@ -1,7 +1,7 @@
 <template>
   <aside class="sidebar" :class="{ active: isActive }">
     <a href="/">
-      <img src="~/assets/images/logo.jpeg" class="sidebar__logo" alt="" />
+      <img src="~/assets/images/logo.jpeg" class="sidebar__logo" alt="Logo" />
     </a>
     <h2 class="h3 mb-8 font-weight-bold">Taís Camargo Siqueira</h2>
     <p class="h4 mb-1">

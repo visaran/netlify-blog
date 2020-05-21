@@ -1,12 +1,19 @@
 <template>
   <div>
     <the-sidebar :isSidebarActive="isSidebarActive" @closed="onClose" />
-    <button
-      class="btn btn-reset p-5 d-block d-lg-none ml-auto"
-      @click="toggleMenu"
-    >
-      <font-awesome-icon :icon="['fas', 'bars']" />
-    </button>
+
+    <header class="header">
+      <nuxt-link to="/">
+        <img src="~/assets/images/logo.jpeg" class="header__logo" alt="Logo" />
+      </nuxt-link>
+      <button
+        class="btn btn-reset p-5 d-block d-lg-none ml-auto"
+        @click="toggleMenu"
+      >
+        <font-awesome-icon :icon="['fas', 'bars']" />
+      </button>
+    </header>
+
     <main class="main-content">
       <nuxt />
     </main>
@@ -43,6 +50,29 @@ export default class Default extends Vue {
 
   @include media-breakpoint-up(lg) {
     padding: 40px 30px;
+  }
+}
+
+.header {
+  background: $pink;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+
+  &__logo {
+    max-width: 50px;
+    border-radius: 50%;
   }
 }
 </style>
