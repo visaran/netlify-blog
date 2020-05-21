@@ -4,14 +4,6 @@
       <img src="~/assets/images/logo.jpeg" class="sidebar__logo" alt="Logo" />
     </a>
     <h2 class="h3 mb-8 font-weight-bold">Taís Camargo Siqueira</h2>
-    <p class="h4 mb-1">
-      <a href="#"><font-awesome-icon :icon="['fab', 'whatsapp']"/></a>
-      (19) 98134-4146
-    </p>
-    <p class="h4">
-      <a href="#"><font-awesome-icon :icon="['fas', 'envelope']"/></a>
-      taissiqueira@adv.oabsp.org.br
-    </p>
 
     <ul class="menu ">
       <li class="">

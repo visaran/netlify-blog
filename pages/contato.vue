@@ -2,6 +2,20 @@
   <div>
     <h1 class="text-center font-weight-bold mb-6">Entre em contato</h1>
     <div class="card-body shadow">
+      <div class="text-center mb-5">
+        <p class="h4 mb-1">
+          <a href="#"
+            ><font-awesome-icon color="#403e3e" :icon="['fab', 'whatsapp']"
+          /></a>
+          (19) 98134-4146
+        </p>
+        <p class="h4">
+          <a href="#"
+            ><font-awesome-icon color="#403e3e" :icon="['fas', 'envelope']"
+          /></a>
+          taissiqueira@adv.oabsp.org.br
+        </p>
+      </div>
       <form
         name="contactus"
         method="post"
