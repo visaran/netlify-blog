@@ -30,6 +30,7 @@ import PostItem from "@/components/PostItem.vue";
 @Component({
   head() {
     return {
+      title: "Blog",
       script: [
         { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
       ]
