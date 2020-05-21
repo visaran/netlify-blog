@@ -3,18 +3,20 @@
     <h1 class="text-center font-weight-bold mb-6">Entre em contato</h1>
     <div class="card-body shadow">
       <div class="text-center mb-5">
-        <p class="h4 mb-1">
-          <a href="#"
-            ><font-awesome-icon color="#403e3e" :icon="['fab', 'whatsapp']"
-          /></a>
-          (19) 98134-4146
-        </p>
-        <p class="h4">
-          <a href="#"
-            ><font-awesome-icon color="#403e3e" :icon="['fas', 'envelope']"
-          /></a>
-          taissiqueira@adv.oabsp.org.br
-        </p>
+        <a
+          class="text-gray h4 d-block"
+          href="https://api.whatsapp.com/send?phone=+5519981344146"
+          target="_blank"
+          ><font-awesome-icon color="#403e3e" :icon="['fab', 'whatsapp']" />
+          (19) 98134-4146</a
+        >
+
+        <a
+          href="mailto: taissiqueira@adv.oabsp.org.br"
+          class="text-gray h4 d-block"
+          ><font-awesome-icon color="#403e3e" :icon="['fas', 'envelope']" />
+          taissiqueira@adv.oabsp.org.br</a
+        >
       </div>
       <form
         name="contactus"
