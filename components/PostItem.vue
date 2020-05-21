@@ -41,7 +41,7 @@ export default class PostItem extends Vue {
   }
 
   &__img {
-    height: 300px;
+    height: 220px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -49,6 +49,10 @@ export default class PostItem extends Vue {
     padding: 1.25rem;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
+
+    @include media-breakpoint-up(lg) {
+      height: 300px;
+    }
   }
 
   &__link {
