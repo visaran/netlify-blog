@@ -10,7 +10,9 @@
               class="post-content"
               v-html="$md.render(pageInfo.content)"
             ></div>
-            <p></p>
+            <nuxt-link to="/contato" class="btn btn-secondary"
+              >Quer falar comigo? Entre em contato</nuxt-link
+            >
           </div>
           <img
             :src="pageInfo.thumbnail"

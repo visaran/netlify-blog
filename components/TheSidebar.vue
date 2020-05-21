@@ -20,6 +20,9 @@
       <li class="">
         <nuxt-link to="/blog" @click.native="closeMenu">Blog</nuxt-link>
       </li>
+      <li class="">
+        <nuxt-link to="/contato" @click.native="closeMenu">Contato</nuxt-link>
+      </li>
     </ul>
 
     <h4 class="h4">Redes sociais:</h4>
