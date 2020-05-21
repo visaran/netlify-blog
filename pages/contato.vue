@@ -1,6 +1,11 @@
 <template>
   <div>
-    <form name="contactus" method="post" netlify netlify-honeypot="bot-field">
+    <form
+      name="contactus"
+      method="post"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
       <input type="hidden" name="form-name" value="contactus" />
       <div class="form-group">
         <label for="name">Name:</label>
