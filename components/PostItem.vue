@@ -12,7 +12,7 @@
     <div class="card-body">
       <p class="post-item__text">{{ post.description }}</p>
       <nuxt-link
-        :to="post.slug"
+        :to="`/blog/${post.slug}`"
         class="btn btn-lg btn-secondary"
         variant="secondary"
         >Continue lendo</nuxt-link
