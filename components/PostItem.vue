@@ -1,7 +1,7 @@
 <template>
   <article class="post-item card shadow">
     <nuxt-link
-      :to="post.slug"
+      :to="`/blog/${post.slug}`"
       class="post-item__img post-item__link"
       :style="{
         backgroundImage: `url(${post.thumbnail})`

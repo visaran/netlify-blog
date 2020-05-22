@@ -36,7 +36,7 @@ export default {
       return fs.readdirSync("./assets/content/blog").map(file => {
         // let normalizedPath = removeAccents(path.parse(file).name);
         return {
-          route: `/${path.parse(file).name}`, // Return the slug
+          route: `/blog/${path.parse(file).name}`, // Return the slug
           payload: require(`./assets/content/blog/${file}`)
         };
       });
