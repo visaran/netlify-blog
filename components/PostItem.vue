@@ -23,10 +23,15 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
+import removeAccents from "remove-accents";
 
 @Component({})
 export default class PostItem extends Vue {
   @Prop() post!: any;
+
+  get normalizedSlug() {
+    return removeAccents(this.post.slug);
+  }
 }
 </script>
 

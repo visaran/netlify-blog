@@ -1,3 +1,5 @@
+import removeAccents from "remove-accents";
+
 export default {
   mode: "universal",
   /*
@@ -32,8 +34,9 @@ export default {
       const fs = require("fs");
       const path = require("path");
       return fs.readdirSync("./assets/content/blog").map(file => {
+        // let normalizedPath = removeAccents(path.parse(file).name);
         return {
-          route: `/blog/${path.parse(file).name}`, // Return the slug
+          route: `/${path.parse(file).name}`, // Return the slug
           payload: require(`./assets/content/blog/${file}`)
         };
       });
