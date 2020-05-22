@@ -23,7 +23,7 @@
         method="post"
         data-netlify="true"
         netlify-honeypot="bot-field"
-        @submit.prevent="handleSubmit"
+        @submit="handleSubmit"
       >
         <input type="hidden" name="form-name" value="contactus" />
         <div class="form-group">
@@ -83,6 +83,7 @@ export default class Blog extends Vue {
       )
       .then(() => {
         alert("Obrigado! Sua mensagem foi enviada com sucesso!");
+        this.$router.push("/contato");
       });
   }
 }
