@@ -69,12 +69,17 @@ export default class Blog extends Vue {
   }
 
   handleSubmit() {
+    const axiosConfig: any = {
+      header: { "Content-Type": "application/x-www-form-urlencoded" }
+    };
     axios
       .post(
         "/",
         this.encode({
-          "form-name": "contactus"
-        })
+          "form-name": "contactus",
+          ...this.form
+        }),
+        axiosConfig
       )
       .then(() => {
         alert("Obrigado! Sua mensagem foi enviada com sucesso!");
