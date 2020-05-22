@@ -23,6 +23,7 @@
         method="post"
         data-netlify="true"
         netlify-honeypot="bot-field"
+        @submit="handleSubmit"
       >
         <input type="hidden" name="form-name" value="contactus" />
         <div class="form-group">
@@ -48,20 +49,36 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 import PostItem from "@/components/PostItem.vue";
+import axios from "axios";
 
 @Component({
   head() {
     return {
-      title: "Home"
+      title: "Contato"
     };
   },
-  components: {
-    PostItem
-  }
+  components: {}
 })
 export default class Blog extends Vue {
-  get posts() {
-    return this.$store.state.blogPosts;
+  form = {};
+
+  encode(data: any) {
+    return Object.keys(data)
+      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+      .join("&");
+  }
+
+  handleSubmit() {
+    axios
+      .post(
+        "/",
+        this.encode({
+          "form-name": "contactus"
+        })
+      )
+      .then(() => {
+        alert("Obrigado! Sua mensagem foi enviada com sucesso!");
+      });
   }
 }
 </script>
