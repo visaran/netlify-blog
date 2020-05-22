@@ -23,7 +23,7 @@
         method="post"
         data-netlify="true"
         netlify-honeypot="bot-field"
-        @submit="handleSubmit"
+        @submit.prevent="handleSubmit"
       >
         <input type="hidden" name="form-name" value="contactus" />
         <div class="form-group">
