@@ -21,6 +21,7 @@
       <form
         name="contactus"
         method="post"
+        action="/contato"
         data-netlify="true"
         netlify-honeypot="bot-field"
         @submit="handleSubmit"
@@ -83,7 +84,6 @@ export default class Blog extends Vue {
       )
       .then(() => {
         alert("Obrigado! Sua mensagem foi enviada com sucesso!");
-        this.$router.push("/contato");
       });
   }
 }
