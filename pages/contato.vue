@@ -28,15 +28,32 @@
         <input type="hidden" name="form-name" value="contactus" />
         <div class="form-group">
           <label for="name">Nome:</label>
-          <input type="text" class="form-control" name="name" required />
+          <input
+            type="text"
+            class="form-control"
+            @input="ev => (form.name = ev.target.value)"
+            name="name"
+            required
+          />
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" name="email" class="form-control" required />
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            @input="ev => (form.email = ev.target.value)"
+            required
+          />
         </div>
         <div class="form-group">
           <label for="message">Mensagem:</label>
-          <textarea name="message" class="form-control" required></textarea>
+          <textarea
+            name="message"
+            class="form-control"
+            @input="ev => (form.message = ev.target.value)"
+            required
+          ></textarea>
         </div>
         <button type="submit" class="btn btn-secondary" value="Send message">
           Enviar
@@ -60,7 +77,11 @@ import axios from "axios";
   components: {}
 })
 export default class Blog extends Vue {
-  form = {};
+  form = {
+    name: "",
+    email: "",
+    message: ""
+  };
 
   encode(data: any) {
     return Object.keys(data)
@@ -76,7 +97,8 @@ export default class Blog extends Vue {
       .post(
         "/",
         this.encode({
-          "form-name": "contactus"
+          "form-name": "contactus",
+          ...this.form
         }),
         axiosConfig
       )
