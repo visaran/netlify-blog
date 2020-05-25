@@ -20,13 +20,13 @@ collections:
       - { label: 'Descrição', name: 'description', widget: 'string' }
       - { label: 'Conteúdo', name: 'body', widget: 'markdown' }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
-  - label: 'Pages'
+  - label: 'Páginas'
     name: 'pages'
     files:
-      - label: 'Página sobre'
-        name: 'about'
+      - label: 'Página inicial'
+        name: 'home'
         format: 'json'
-        file: 'assets/content/page/about.json'
+        file: 'assets/content/pages/home.json'
         fields:
           - { label: 'Título', name: title, widget: string }
           - { label: 'Foto', name: 'thumbnail', widget: 'image' }
