@@ -19,7 +19,7 @@ collections:
       - { label: 'Data da publicação', name: 'date', widget: 'datetime' }
       - { label: 'Descrição', name: 'description', widget: 'string' }
       - { label: 'Conteúdo', name: 'body', widget: 'markdown' }
-      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Imagem de destaque', name: 'thumbnail', widget: 'image' }
   - label: 'Páginas'
     name: 'pages'
     files:
