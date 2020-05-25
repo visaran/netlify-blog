@@ -31,6 +31,7 @@
           <input
             type="text"
             class="form-control"
+            v-model="form.name"
             @input="ev => (form.name = ev.target.value)"
             name="name"
             required
@@ -42,6 +43,7 @@
             type="email"
             name="email"
             class="form-control"
+            v-model="form.email"
             @input="ev => (form.email = ev.target.value)"
             required
           />
@@ -51,6 +53,7 @@
           <textarea
             name="message"
             class="form-control"
+            v-model="form.message"
             @input="ev => (form.message = ev.target.value)"
             required
           ></textarea>
@@ -103,10 +106,10 @@ export default class Blog extends Vue {
         axiosConfig
       )
       .then(() => {
-        alert("Obrigado! Sua mensagem foi enviada com sucesso!");
         this.form.name = "";
         this.form.email = "";
         this.form.message = "";
+        alert("Obrigado! Sua mensagem foi enviada com sucesso!");
       });
   }
 }
