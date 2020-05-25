@@ -55,7 +55,7 @@
             required
           ></textarea>
         </div>
-        <button type="submit" class="btn btn-secondary" value="Send message">
+        <button type="submit" class="btn btn-secondary" value="Enviar">
           Enviar
         </button>
       </form>
@@ -104,6 +104,9 @@ export default class Blog extends Vue {
       )
       .then(() => {
         alert("Obrigado! Sua mensagem foi enviada com sucesso!");
+        this.form.name = "";
+        this.form.email = "";
+        this.form.message = "";
       });
   }
 }
