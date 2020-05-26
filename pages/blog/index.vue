@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 class="h1 text-center font-weight-bold mb-6">Artigos</h1>
+  <div class="main-content">
+    <h1 class="h1 text-center font-weight-bold mb-6">Todos os artigos</h1>
     <post-item :post="post" v-for="post in posts" :key="post.id" />
   </div>
 </template>
@@ -21,7 +21,6 @@ import PostItem from "@/components/PostItem.vue";
 })
 export default class Blog extends Vue {
   get posts() {
-    // return this.$store.state.blogPosts;
     return this.$store.getters["postsOrderedByDate"];
   }
 }

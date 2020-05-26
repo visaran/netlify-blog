@@ -1,27 +1,38 @@
 <template>
   <div class="home">
-    <div class="card shadow">
-      <div class="card-body">
-        <div class="media">
-          <div class="media-body">
-            <h1 class="title text-pink">{{ pageInfo.title }}</h1>
+    <div class="main-content">
+      <div class="card shadow mb-10">
+        <div class="card-body">
+          <div class="media">
+            <div class="media-body">
+              <h1 class="title text-pink">{{ pageInfo.title }}</h1>
 
-            <div
-              class="post-content"
-              v-html="$md.render(pageInfo.content)"
-            ></div>
-            <nuxt-link to="/contato" class="btn btn-secondary"
-              >Quer falar comigo? Entre em contato</nuxt-link
-            >
+              <div
+                class="post-content"
+                v-html="$md.render(pageInfo.content)"
+              ></div>
+              <nuxt-link to="/contato" class="btn btn-secondary"
+                >Quer falar comigo? Entre em contato</nuxt-link
+              >
+            </div>
+            <img
+              :src="pageInfo.thumbnail"
+              alt="Foto de perfil"
+              class="home__photo ml-lg-4 mx-auto"
+            />
           </div>
-          <img
-            :src="pageInfo.thumbnail"
-            alt="Foto de perfil"
-            class="home__photo ml-lg-4 mx-auto"
-          />
         </div>
       </div>
     </div>
+
+    <b-container>
+      <h1 class="h1 text-center font-weight-bold mb-6">Últimos artigos</h1>
+      <b-row>
+        <b-col lg="4" v-for="post in posts" :key="post.id" class="mb-4 mb-lg-0">
+          <post-item :post="post" :small="true" />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -45,6 +56,10 @@ import PostItem from "@/components/PostItem.vue";
 export default class Home extends Vue {
   get pageInfo() {
     return this.$store.state.aboutPage[0];
+  }
+
+  get posts() {
+    return this.$store.getters["postsOrderedByDate"].slice(0, 3);
   }
 }
 </script>

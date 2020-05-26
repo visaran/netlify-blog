@@ -14,7 +14,7 @@
       </button>
     </header>
 
-    <main class="main-content">
+    <main class="">
       <nuxt />
     </main>
   </div>
@@ -43,16 +43,6 @@ export default class Default extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.main-content {
-  padding: 40px 15px;
-  max-width: 800px;
-  margin: 0 auto;
-
-  @include media-breakpoint-up(lg) {
-    padding: 40px 30px;
-  }
-}
-
 .header {
   background: $pink;
   display: flex;

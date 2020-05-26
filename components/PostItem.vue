@@ -1,5 +1,5 @@
 <template>
-  <article class="post-item card shadow">
+  <article class="post-item card shadow" :class="{ sm: small }">
     <nuxt-link
       :to="`/blog/${post.slug}`"
       class="post-item__img post-item__link"
@@ -28,6 +28,7 @@ import removeAccents from "remove-accents";
 @Component({})
 export default class PostItem extends Vue {
   @Prop() post!: any;
+  @Prop() small!: any;
 
   get normalizedSlug() {
     return removeAccents(this.post.slug);
@@ -43,6 +44,17 @@ export default class PostItem extends Vue {
 
   &:last-of-type {
     margin-bottom: 0;
+  }
+
+  &.sm {
+    .post-item__title {
+      font-size: 1.7rem;
+    }
+
+    .post-item__text {
+      font-size: 18px;
+      min-height: 180px;
+    }
   }
 
   &__img {

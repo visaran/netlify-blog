@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-content">
     <h1 class="text-center font-weight-bold mb-6">Entre em contato</h1>
     <div class="card-body shadow">
       <div class="text-center mb-5">
