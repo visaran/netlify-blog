@@ -21,7 +21,8 @@ import PostItem from "@/components/PostItem.vue";
 })
 export default class Blog extends Vue {
   get posts() {
-    return this.$store.state.blogPosts;
+    // return this.$store.state.blogPosts;
+    return this.$store.getters["postsOrderedByDate"];
   }
 }
 </script>

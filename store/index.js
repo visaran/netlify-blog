@@ -1,3 +1,5 @@
+export const strict = false;
+
 export const state = () => ({
   blogPosts: [],
   aboutPage: {}
@@ -39,5 +41,13 @@ export const actions = {
     });
     await commit("setBlogPosts", blogPosts);
     await commit("setAboutPage", aboutPage);
+  }
+};
+
+export const getters = {
+  postsOrderedByDate(state) {
+    return state.blogPosts.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
   }
 };
