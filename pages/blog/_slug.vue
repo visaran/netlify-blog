@@ -1,8 +1,10 @@
 <template>
-  <article class="post-content">
-    <h1>{{ blogPost.title }}</h1>
-    <div v-html="$md.render(blogPost.body)"></div>
-  </article>
+  <div class="main-content">
+    <article class="post-content">
+      <h1>{{ blogPost.title }}</h1>
+      <div v-html="$md.render(blogPost.body)"></div>
+    </article>
+  </div>
 </template>
 
 <script lang="ts">
