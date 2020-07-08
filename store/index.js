@@ -23,7 +23,7 @@ export const actions = {
     );
 
     let pages = await require.context(
-      "~/assets/content/page/",
+      "~/assets/content/pages/",
       false,
       /\.json$/
     );
