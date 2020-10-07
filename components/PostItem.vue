@@ -4,7 +4,7 @@
       :to="`/blog/${post.slug}`"
       class="post-item__img post-item__link"
       :style="{
-        backgroundImage: `url(${post.thumbnail})`
+        backgroundImage: `url(${post.thumbnail})`,
       }"
     >
       <h1 class="post-item__title h1">{{ post.title }}</h1>
@@ -58,7 +58,7 @@ export default class PostItem extends Vue {
   }
 
   &__img {
-    height: 220px;
+    min-height: 220px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -68,7 +68,7 @@ export default class PostItem extends Vue {
     border-top-left-radius: 30px;
 
     @include media-breakpoint-up(lg) {
-      height: 300px;
+      min-height: 300px;
     }
   }
 
