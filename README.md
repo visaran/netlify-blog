@@ -1,6 +1,6 @@
-# netlify-blog
+# Netlify Nuxt Blog
 
-> My priceless Nuxt.js project
+> Static blog built for my girlfriend using Nuxt and hosted on Netlify.
 
 ## Build Setup
 
