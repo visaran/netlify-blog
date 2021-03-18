@@ -5,10 +5,10 @@
       <div class="text-center mb-5">
         <a
           class="text-gray h4 d-block"
-          href="https://api.whatsapp.com/send?phone=+5519981344146"
+          href="https://wa.me/message/MFFND5JIZ3EFH1"
           target="_blank"
           ><font-awesome-icon color="#403e3e" :icon="['fab', 'whatsapp']" />
-          (19) 98134-4146</a
+          (19) 99145-1509</a
         >
 
         <a
