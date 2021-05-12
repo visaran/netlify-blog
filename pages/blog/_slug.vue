@@ -17,9 +17,48 @@ import { Vue, Component } from "vue-property-decorator";
       return {
         blogPost: await require(`~/assets/content/blog/${params.slug}.json`)
       };
+  },
+  head() {
+    return {
+      title: this.blogPost.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.blogPost.description
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.blogPost.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.blogPost.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.blogPost.thumbnail
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: this.blogPost.thumbnail
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.blogPost.title
+        }
+      ]
+    }
   }
 })
-export default class HomeSlug extends Vue {}
+export default class HomeSlug extends Vue {
+
+}
 </script>
 
 <style lang="scss" scoped></style>
