@@ -7,10 +7,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-
-@Component({
+<script>
+export default {
+  name: 'Articles',
   async asyncData({ params, payload }) {
     if (payload) return { blogPost: payload };
     else
@@ -55,9 +54,6 @@ import { Vue, Component } from "vue-property-decorator";
       ]
     }
   }
-})
-export default class HomeSlug extends Vue {
-
 }
 </script>
 
